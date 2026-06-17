@@ -133,6 +133,13 @@
         .iccid-btn:hover {
             box-shadow: 0 8px 20px rgba(255, 152, 0, 0.4);
         }
+        .order-btn2 {
+            margin-top: 8px;
+            background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);
+        }
+        .order-btn2:hover {
+            box-shadow: 0 8px 20px rgba(76, 175, 80, 0.4);
+        }
         .btn-row {
             margin-top: 12px;
             display: flex;
@@ -343,6 +350,7 @@
             </div>
             <button onclick="window.open('https://wap.gz.10086.cn/smphone/gzshop/shop/#/pages/card/cardSearch','_blank')" class="apply-btn2" style="width:100%;">新渠道下卡</button>
             <button onclick="document.getElementById('iccidModal').style.display='flex'" class="iccid-btn" style="width:100%;margin-top:10px;">查询ICCID</button>
+            <button onclick="window.open('https://wap.gz.10086.cn/smphone/gzshop/shop/#/order/order-search/index?userId=&mobile=','_blank')" class="order-btn2" style="width:100%;margin-top:10px;">新渠道订单查询</button>
         </div>
 
         <!-- 公共功能 -->
@@ -358,7 +366,8 @@
                 <h2 style="margin-bottom:6px;font-size:18px;color:#333;">ICCID查询（新渠道）</h2>
                 <p style="color:#888;font-size:13px;margin-bottom:16px;">输入身份证和收货手机号查询ICCID</p>
                 <input type="text" id="iccidUserId" placeholder="请输入身份证号（18位）" maxlength="18" style="width:100%;padding:12px;margin-bottom:10px;border:2px solid #ddd;border-radius:8px;font-size:14px;box-sizing:border-box;">
-                <input type="text" id="iccidMobile" placeholder="请输入收货手机号" maxlength="11" style="width:100%;padding:12px;margin-bottom:16px;border:2px solid #ddd;border-radius:8px;font-size:14px;box-sizing:border-box;">
+                <input type="text" id="iccidMobile" placeholder="请输入收货手机号" maxlength="11" style="width:100%;padding:12px;margin-bottom:10px;border:2px solid #ddd;border-radius:8px;font-size:14px;box-sizing:border-box;">
+                <p style="color:#f44336;font-size:11px;margin-bottom:12px;text-align:left;line-height:1.4;">⚠️ 免责声明：本工具不收集、不存储任何用户输入信息，所有数据仅用于查询并直接转发至移动官方接口。介意者请勿使用本功能。</p>
                 <button onclick="queryICCID()" style="background:linear-gradient(135deg,#ff9800 0%,#e65100 100%);width:100%;color:white;border:none;padding:12px;border-radius:8px;font-size:14px;cursor:pointer;">查询ICCID</button>
                 <div id="iccidResult" style="margin-top:16px;padding:12px;background:#f5f5f5;border-radius:8px;display:none;"></div>
             </div>
